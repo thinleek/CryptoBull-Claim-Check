@@ -60,6 +60,25 @@ def isBearClaimed(bullTokenIdDec):
 @app.route('/')
 def firstRoute():
         return '''
+        <script>
+        function checkbear() {
+            var bullnr = document.getElementById("bullnr").value;
+            var url = "https://cryptobull-claim-server.herokuapp.com/"
+            if ( bullnr > 0 && bullnr < 8889 ) {
+                var bullnr = bullnr;
+                var newurl = url + bullnr;
+            window.location.href = newurl;
+            }
+            else {
+                alert("number invalid");
+            }
+            
+        }
+    </script>
+    <div class="checkbear" style="width: 160px;">
+    <input type="number" style="width: 100%;height:40px;font-size:32px;text-align:center" id="bullnr" min="0" max="8888" value="7777"/><button style="width: 100%;height: 40px;display:block;margin-top:10px" onclick="checkbear()">check bear</button>
+    </div>
+    
         <h1>Crypto Bull #{}</h1>
         <img src="{}" height="150" width="150" ></img>
         </br>
@@ -75,6 +94,24 @@ def index(tokenId):
     if tokenId <= 7777 and tokenId > 0: 
         data=isBearClaimed(tokenId)
         return '''
+        <script>
+        function checkbear() {
+            var bullnr = document.getElementById("bullnr").value;
+            var url = "https://cryptobull-claim-server.herokuapp.com/"
+            if ( bullnr > 0 && bullnr < 8889 ) {
+                var bullnr = bullnr;
+                var newurl = url + bullnr;
+            window.location.href = newurl;
+            }
+            else {
+                alert("number invalid");
+            }
+            
+        }
+    </script>
+    <div class="checkbear" style="width: 160px;">
+    <input type="number" style="width: 100%;height:40px;font-size:32px;text-align:center" id="bullnr" min="0" max="8888" value="7777"/><button style="width: 100%;height: 40px;display:block;margin-top:10px" onclick="checkbear()">check bear</button>
+    </div>
         <h1>Crypto Bull #{}</h1>
         <img src="{}" height="150" width="150" ></img>
         </br>
@@ -85,6 +122,24 @@ def index(tokenId):
         '''.format(tokenId,data['imgURL'],data['tokenURI'],data['claimed'],data['openseaUrl'],)
     else:
         return '''
+        <script>
+        function checkbear() {
+            var bullnr = document.getElementById("bullnr").value;
+            var url = "https://cryptobull-claim-server.herokuapp.com/"
+            if ( bullnr > 0 && bullnr < 8889 ) {
+                var bullnr = bullnr;
+                var newurl = url + bullnr;
+            window.location.href = newurl;
+            }
+            else {
+                alert("number invalid");
+            }
+            
+        }
+    </script>
+    <div class="checkbear" style="width: 160px;">
+    <input type="number" style="width: 100%;height:40px;font-size:32px;text-align:center" id="bullnr" min="0" max="8888" value="7777"/><button style="width: 100%;height: 40px;display:block;margin-top:10px" onclick="checkbear()">check bear</button>
+    </div>
         <h1>Crypto Bull #{}</h1>
         <img src="{}" height="150" width="150" ></img>
         </br>
